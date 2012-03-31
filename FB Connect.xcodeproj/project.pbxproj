@@ -38,21 +38,21 @@
 		98D1C65F14E8B64500511FB7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		98D1C66114E8B64500511FB7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		98D1C66314E8B64500511FB7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		98D1C66714E8B64500511FB7 /* FB Connect-Info.plist */ = {isa = PBXFileReference; path = "FB Connect-Info.plist"; sourceTree = "<group>"; };
+		98D1C66714E8B64500511FB7 /* FB Connect-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FB Connect-Info.plist"; sourceTree = "<group>"; };
 		98D1C66914E8B64500511FB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		98D1C66B14E8B64500511FB7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		98D1C66D14E8B64500511FB7 /* FB Connect-Prefix.pch */ = {isa = PBXFileReference; path = "FB Connect-Prefix.pch"; sourceTree = "<group>"; };
-		98D1C66E14E8B64500511FB7 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		98D1C66D14E8B64500511FB7 /* FB Connect-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FB Connect-Prefix.pch"; sourceTree = "<group>"; };
+		98D1C66E14E8B64500511FB7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		98D1C66F14E8B64500511FB7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		98D1C67214E8B64500511FB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		98D1C67514E8B64500511FB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		98D1C67714E8B64500511FB7 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		98D1C67714E8B64500511FB7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		98D1C67814E8B64500511FB7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		98D1C67F14E8B64500511FB7 /* FB ConnectTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FB ConnectTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D1C68014E8B64500511FB7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		98D1C68814E8B64500511FB7 /* FB ConnectTests-Info.plist */ = {isa = PBXFileReference; path = "FB ConnectTests-Info.plist"; sourceTree = "<group>"; };
+		98D1C68814E8B64500511FB7 /* FB ConnectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FB ConnectTests-Info.plist"; sourceTree = "<group>"; };
 		98D1C68A14E8B64500511FB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		98D1C68C14E8B64500511FB7 /* FB_ConnectTests.h */ = {isa = PBXFileReference; path = FB_ConnectTests.h; sourceTree = "<group>"; };
+		98D1C68C14E8B64500511FB7 /* FB_ConnectTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FB_ConnectTests.h; sourceTree = "<group>"; };
 		98D1C68D14E8B64500511FB7 /* FB_ConnectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FB_ConnectTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -327,7 +327,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -353,7 +353,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -443,6 +443,7 @@
 				98D1C69314E8B64500511FB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		98D1C69414E8B64500511FB7 /* Build configuration list for PBXNativeTarget "FB ConnectTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +452,7 @@
 				98D1C69614E8B64500511FB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

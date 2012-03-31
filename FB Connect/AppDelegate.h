@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define VICTIMS_FB_ACCESS_TOKEN @"replace_me"
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
