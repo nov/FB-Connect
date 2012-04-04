@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9845C1C2152C259400ECF2C4 /* Facebook-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9845C1C1152C259400ECF2C4 /* Facebook-Icon.png */; };
+		9845C1C4152C268700ECF2C4 /* FB-DevilHorns.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9845C1C3152C268700ECF2C4 /* FB-DevilHorns.jpg */; };
 		98D1C66014E8B64500511FB7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D1C65F14E8B64500511FB7 /* UIKit.framework */; };
 		98D1C66214E8B64500511FB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D1C66114E8B64500511FB7 /* Foundation.framework */; };
 		98D1C66414E8B64500511FB7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D1C66314E8B64500511FB7 /* CoreGraphics.framework */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9845C1C1152C259400ECF2C4 /* Facebook-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Facebook-Icon.png"; sourceTree = "<group>"; };
+		9845C1C3152C268700ECF2C4 /* FB-DevilHorns.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "FB-DevilHorns.jpg"; sourceTree = "<group>"; };
 		98D1C65B14E8B64500511FB7 /* FB Connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FB Connect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98D1C65F14E8B64500511FB7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		98D1C66114E8B64500511FB7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,6 +87,7 @@
 		98D1C65014E8B64400511FB7 = {
 			isa = PBXGroup;
 			children = (
+				9845C1C1152C259400ECF2C4 /* Facebook-Icon.png */,
 				98D1C66514E8B64500511FB7 /* FB Connect */,
 				98D1C68614E8B64500511FB7 /* FB ConnectTests */,
 				98D1C65E14E8B64500511FB7 /* Frameworks */,
@@ -127,6 +132,7 @@
 		98D1C66614E8B64500511FB7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9845C1C3152C268700ECF2C4 /* FB-DevilHorns.jpg */,
 				98D1C66714E8B64500511FB7 /* FB Connect-Info.plist */,
 				98D1C66814E8B64500511FB7 /* InfoPlist.strings */,
 				98D1C66B14E8B64500511FB7 /* main.m */,
@@ -227,6 +233,8 @@
 				98D1C66A14E8B64500511FB7 /* InfoPlist.strings in Resources */,
 				98D1C67314E8B64500511FB7 /* MainStoryboard_iPhone.storyboard in Resources */,
 				98D1C67614E8B64500511FB7 /* MainStoryboard_iPad.storyboard in Resources */,
+				9845C1C2152C259400ECF2C4 /* Facebook-Icon.png in Resources */,
+				9845C1C4152C268700ECF2C4 /* FB-DevilHorns.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,7 +335,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Takuma Kudo (F6RGJLWTJJ)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -342,6 +350,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PROVISIONING_PROFILE = "90495FD1-8BBB-40A3-B6AE-E188B82FD1FA";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -353,7 +362,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Takuma Kudo (F6RGJLWTJJ)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -362,6 +371,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "90495FD1-8BBB-40A3-B6AE-E188B82FD1FA";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

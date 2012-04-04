@@ -20,10 +20,11 @@
     return YES;
 }
 
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
-{
-    NSLog(@"url: %@", [url absoluteString]);
-    NSArray *pairs = [[url query] componentsSeparatedByString:@"&"];
+/**
+ * A function for parsing URL parameters.
+ */
+- (NSDictionary*)parseURLParams:(NSString *)query {
+	NSArray *pairs = [query componentsSeparatedByString:@"&"];
 	NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
 	for (NSString *pair in pairs) {
 		NSArray *kv = [pair componentsSeparatedByString:@"="];
@@ -32,17 +33,20 @@
          stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         
 		[params setObject:val forKey:[kv objectAtIndex:0]];
-	};
+	}
+    return params;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    NSDictionary *params = [self parseURLParams:[url query]];
     NSString* clientId = [params valueForKey:@"client_id"];
     NSString* redirectURIString = [NSString stringWithFormat:@"fb%@://authorize?access_token=%@", clientId, VICTIMS_FB_ACCESS_TOKEN];
     NSURL* redirectURI = [NSURL URLWithString:redirectURIString];
     if ([[UIApplication sharedApplication] canOpenURL:redirectURI]) {
-        Boolean opended = [[UIApplication sharedApplication] openURL:redirectURI];
-        NSLog(@"opened: %c", opended ? 't' : 'f');
-    } else {
-        NSLog(@"Cannot Open: %@", redirectURIString);
+        [[UIApplication sharedApplication] openURL:redirectURI];
     }
-    return YES;
+    return TRUE;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
